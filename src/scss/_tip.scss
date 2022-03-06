@@ -1,0 +1,73 @@
+.tip-section {
+  .tip-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.6rem;
+
+    [type="radio"] {
+      display: none;
+    }
+
+    [type="radio"]:checked ~ span {
+      background-color: $strong-cyan;
+      color: $very-dark-cyan;
+    }
+  }
+
+  .tip-btn {
+    display: block;
+    background-color: $very-dark-cyan;
+    color: #fff;
+    border: none;
+    border-radius: $input-border-radius;
+    padding: 0.6rem 0;
+    font-size: 1.4rem;
+    font-weight: $input-font-weight;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .tip-custom {
+    background-color: $very-light-grayish-cyan;
+    color: $dark-grayish-cyan;
+  }
+
+  .tip-custom-input-group {
+    outline: none;
+    background-color: $very-light-grayish-cyan;
+    border-radius: $input-border-radius;
+    position: relative;
+
+    .tip-custom-input {
+      outline: none;
+      border: 2px solid transparent;
+      background-color: $very-light-grayish-cyan;
+      border-radius: $input-border-radius;
+      text-align: right;
+      padding: 0.6rem 0.6rem;
+      color: $very-dark-cyan;
+      font-family: $font-family;
+      font-size: 1.2rem;
+      font-weight: $input-font-weight;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $strong-cyan;
+      }
+    }
+
+    .percent {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      font-size: 1.8rem;
+      font-family: $font-family;
+      font-weight: 700;
+      color: $very-dark-cyan;
+    }
+  }
+}

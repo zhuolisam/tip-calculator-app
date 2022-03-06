@@ -1,0 +1,60 @@
+.result-section {
+  background-color: $very-dark-cyan;
+  border-radius: 1.2rem;
+  padding: 2.4rem 1.2rem;
+
+  .res-div {
+    margin-bottom: 2rem;
+
+    .res-text {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      color: #fff;
+      margin-bottom: 3rem;
+
+      h2 {
+        font-size: 1.2rem;
+        span {
+          display: block;
+          font-size: 0.8rem;
+          color: $light-grayish-cyan;
+        }
+      }
+
+      p {
+        right: 0;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $strong-cyan;
+      }
+    }
+  }
+
+  .reset {
+    border: none;
+    width: 100%;
+    border-radius: $input-border-radius;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    padding: 0.6rem 0;
+    font-family: $font-family;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .disabled {
+    background-color: #326d70;
+    cursor: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .result-section {
+    grid-row: 1/4;
+
+    .reset {
+      margin-top: 25%;
+    }
+  }
+}

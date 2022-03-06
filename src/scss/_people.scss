@@ -1,0 +1,58 @@
+.people-section {
+  .people-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .people-error-text {
+    right: 0;
+    color: red;
+    display: none;
+    align-self: end;
+  }
+
+  .people-input-group {
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 40%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1.2rem;
+    }
+
+    .people-input {
+      width: 100%;
+      border: 2px solid transparent;
+      border-radius: $input-border-radius;
+      background-color: $very-light-grayish-cyan;
+      padding: $input-padding;
+      color: $very-dark-cyan;
+      text-align: right;
+      font-size: 1.6rem;
+      font-family: $font-family;
+      font-weight: 700;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $strong-cyan;
+      }
+    }
+  }
+}
+
+.people-error {
+  .people-error-text {
+    display: block;
+  }
+
+  .people-input-group {
+    .people-input {
+      &:focus {
+        outline: none;
+        border: 2px solid red;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.bill-section {
+  .bill-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bill-error-text {
+    right: 0;
+    color: red;
+    display: none;
+    align-self: end;
+  }
+
+  .bill-input-group {
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 40%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1.2rem;
+    }
+
+    .bill-input {
+      width: 100%;
+      border: 2px solid transparent;
+      border-radius: $input-border-radius;
+      background-color: $very-light-grayish-cyan;
+      padding: $input-padding;
+      color: $very-dark-cyan;
+      text-align: right;
+      font-size: 1.6rem;
+      font-family: $font-family;
+      font-weight: 700;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $strong-cyan;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-row: 1/2;
+  }
+
+
+
+}
+
+.bill-error {
+  .bill-error-text {
+    display: block;
+  }
+
+  .bill-input-group {
+    .bill-input {
+      &:focus {
+        outline: none;
+        border: 2px solid red;
+      }
+    }
+  }
+}

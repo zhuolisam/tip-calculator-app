@@ -1,0 +1,25 @@
+.main {
+  background-color: $white;
+  border-radius: 1.2rem;
+  padding: 2rem 1.5rem;
+  font: $font-family;
+
+  @media screen and (min-width: 1280px) {
+    padding: 2rem;
+    margin: auto;
+    width:60rem;
+    display: grid;
+    grid-template: auto auto auto / repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+section {
+  margin-bottom: 1.6rem;
+}
+
+.section-header {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: $dark-grayish-cyan;
+}
