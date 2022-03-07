@@ -29,7 +29,7 @@ const Tip = ({ setTip }) => {
               name="tip"
               type='radio'
               value="0.05"
-              onChange={e => handleTipChange(e)}
+              onClick={e => handleTipChange(e)}
             />
             <span className="tip-btn">5%</span>
           </label>
@@ -39,7 +39,7 @@ const Tip = ({ setTip }) => {
               name="tip"
               type='radio'
               value="0.10"
-              onChange={e => handleTipChange(e)}
+              onClick={e => handleTipChange(e)}
             />
             <span className="tip-btn">10%</span>
           </label>
@@ -49,7 +49,7 @@ const Tip = ({ setTip }) => {
               name="tip"
               type='radio'
               value="0.15"
-              onChange={e => handleTipChange(e)}
+              onClick={e => handleTipChange(e)}
             />
             <span className="tip-btn">15%</span>
           </label>
@@ -59,7 +59,7 @@ const Tip = ({ setTip }) => {
               name="tip"
               type='radio'
               value="0.25"
-              onChange={e => handleTipChange(e)}
+              onClick={e => handleTipChange(e)}
             />
             <span className="tip-btn">25%</span>
           </label>
@@ -69,23 +69,23 @@ const Tip = ({ setTip }) => {
               name="tip"
               type='radio'
               value="0.50"
-              onChange={e => handleTipChange(e)}
+              onClick={e => handleTipChange(e)}
             />
             <span className="tip-btn">50%</span>
           </label>
 
           {!isCustom ?
             (<label>
-              <input type="radio" name="tip" value="" onClick={handleClickCustom} />
-              <span className="tip-btn tip-custom">Custom</span>
+              <input name="tip" type="radio" value="" onClick={e => handleClickCustom()} />
+              <span className="tip-custom">Custom</span>
             </label>) :
-            (<label>
-              <div className='tip-custom-input-group'>
-                <input type="text" name="tip" className="tip-custom-input" onChange={e => handleCustomTip(e)} autoFocus />
-                <span className="percent">%</span>
-              </div>
-            </label>
+            (
+            <div className='tip-custom-input-group'>
+              <input type="text" name="tip" className="tip-custom-input" onChange={e => handleCustomTip(e)} autoFocus />
+              <span className="percent">%</span>
+            </div>
             )
+
           }
         </div>
 

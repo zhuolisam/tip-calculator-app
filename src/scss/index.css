@@ -77,17 +77,14 @@ section {
 
 .tip-section .tip-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-gap: 0.6rem;
 }
-.tip-section .tip-buttons [type=radio] {
+.tip-section [type=radio] {
   display: none;
 }
-.tip-section .tip-buttons [type=radio]:checked ~ span {
-  background-color: #26c0ab;
-  color: #00494d;
-}
-.tip-section .tip-btn {
+.tip-section .tip-btn, .tip-section .tip-custom {
+  outline: none;
   display: block;
   background-color: #00494d;
   color: #fff;
@@ -98,40 +95,42 @@ section {
   font-weight: 700;
   text-align: center;
 }
-.tip-section .tip-btn:hover {
+.tip-section .tip-btn:hover, .tip-section .tip-custom:hover {
   cursor: pointer;
+}
+.tip-section [type=radio]:checked ~ .tip-btn, .tip-section [type=radio]:checked ~ .tip-custom {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 .tip-section .tip-custom {
   background-color: #f4fafa;
   color: #5e7a7d;
 }
 .tip-section .tip-custom-input-group {
-  outline: none;
   background-color: #f4fafa;
   border-radius: 0.4rem;
-  position: relative;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: flex-end;
 }
 .tip-section .tip-custom-input-group .tip-custom-input {
   outline: none;
-  border: 2px solid transparent;
+  border: none;
   background-color: #f4fafa;
   border-radius: 0.4rem;
   text-align: right;
-  padding: 0.6rem 0.6rem;
   color: #00494d;
   font-family: "Space Mono", monospace;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
-.tip-section .tip-custom-input-group .tip-custom-input:focus {
-  outline: none;
+.tip-section .tip-custom-input-group:focus-within {
   border: 2px solid #26c0ab;
 }
 .tip-section .tip-custom-input-group .percent {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
+  margin-left: 0.6rem;
+  margin-right: 1rem;
+  align-self: center;
   font-size: 1.8rem;
   font-family: "Space Mono", monospace;
   font-weight: 700;
